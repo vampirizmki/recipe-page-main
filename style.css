@@ -1,0 +1,187 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --desktop-bg: hsl(31, 53%, 90%);
+  --paragraphs-clr: hsl(30, 10%, 34%);
+  --title-clr: hsl(14, 45%, 36%);
+  --prep-clr: hsl(332, 51%, 32%);
+  --prep-bg: hsl(330, 100%, 98%);
+  --head-clr: hsl(24, 5%, 18%);
+}
+@font-face {
+  font-family: "outfit";
+  src: url(./assets/fonts/outfit/static/Outfit-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "outfit";
+  src: url(./assets/fonts/outfit/static/Outfit-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "outfit";
+  src: url(./assets/fonts/outfit/static/Outfit-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "young-serif";
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.head {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.head img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: none;
+  border-radius: 20px;
+}
+.head h1 {
+  margin: 18px 0;
+  font-family: "young-serif", sans-serif;
+  color: var(--head-clr);
+}
+.head p {
+  font-family: "outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--paragraphs-clr);
+}
+.preparation {
+  margin: 18px 0;
+  padding: 25px;
+  background: var(--prep-bg);
+  border: none;
+  border-radius: 10px;
+  font-family: "outfit", sans-serif;
+}
+.preparation h2,
+.preparation ul {
+  margin: 18px;
+}
+.preparation h2 {
+  color: var(--prep-clr);
+  font-weight: 700;
+}
+.preparation li {
+  margin: 20px;
+  font-weight: 400;
+}
+.ingredients h2,
+.ingredients ul {
+  margin: 18px;
+}
+.ingredients h2 {
+  color: var(--title-clr);
+  font-size: 30px;
+  font-family: "young-serif", sans-serif;
+}
+.ingredients li {
+  margin: 20px;
+  font-weight: 400;
+  font-family: "outfit", sans-serif;
+  color: var(--paragraphs-clr);
+}
+.instruction h2,
+.instruction ol {
+  margin: 18px;
+}
+.instruction h2 {
+  color: var(--title-clr);
+  font-size: 30px;
+  font-family: "young-serif", sans-serif;
+}
+.instruction li {
+  margin: 20px;
+  font-weight: 400;
+  font-family: "outfit", sans-serif;
+  color: var(--paragraphs-clr);
+}
+.instruction ol,
+.instruction li::marker {
+  color: var(--title-clr);
+  font-family: "young-serif", sans-serif;
+}
+.nutrition h2,
+.nutrition p {
+  margin: 18px;
+}
+.nutrition h2 {
+  color: var(--title-clr);
+  font-family: "young-serif", sans-serif;
+  font-size: 30px;
+}
+.nutrition p {
+  color: var(--paragraphs-clr);
+  font-size: 16px;
+}
+.nutrition table {
+  width: calc(100% - 36px);
+  margin: 18px;
+  border-collapse: collapse;
+}
+
+.nutrition tr {
+  position: relative;
+}
+
+.nutrition td {
+  padding: 18px 0;
+  width: 50%;
+}
+
+.nutrition tr::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #ddd;
+}
+
+.nutrition td:first-child {
+  text-align: center;
+  color: var(--paragraphs-clr);
+}
+
+.nutrition td:last-child {
+  text-align: center;
+  color: var(--title-clr);
+  font-weight: bold;
+}
+.parent-container hr {
+  margin: 0 20px;
+}
+
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--desktop-bg);
+  }
+  .parent-container {
+    background: var(--white);
+    width: 100%;
+    max-width: 46rem;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+  }
+}
